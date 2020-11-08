@@ -1,5 +1,22 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":separateMultipleMajorReleases",
+    ":rebaseStalePrs",
+    ":unpublishSafe",
+    ":automergeRequireAllStatusChecks",
+    ":semanticCommits"
+  ],
+  "automerge": true,
+  "masterIssue": true,
+  "masterIssueTitle": "Dependencies Dashboard (Renovate Bot)",
+  "prCreation": "not-pending",
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 4,
+  "packageRules": [
+    {
+      "packageNames": ["net.sourceforge.plantuml:plantuml:plantuml"],
+      "allowedVersions": "/^v?1\\..*$/"
+    }
   ]
 }
