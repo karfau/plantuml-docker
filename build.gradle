@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+}
+
+group 'karfau'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    dockerDeps
+}
+
+dependencies {
+    dockerDeps 'net.sourceforge.plantuml:plantuml:1.2020.0'
+}
+
+task getDockerDeps(type: Copy) {
+    from configurations.dockerDeps
+    into 'jars'
+    shouldRunAfter('dependencies')
+}
