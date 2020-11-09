@@ -11,4 +11,4 @@ PLANTUML_VERSION=$(./plantuml-version.sh)
 
 echo "plantuml version:$PLANTUML_VERSION"
 
-docker build . --build-arg PLANTUML_VERSION=$PLANTUML_VERSION -t karfau/plantuml-docker:$PLANTUML_VERSION
+docker build . --build-arg PLANTUML_VERSION=$PLANTUML_VERSION -t karfau/plantuml:$PLANTUML_VERSION -t karfau/plantuml:latest
