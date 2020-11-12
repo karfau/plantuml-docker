@@ -1,5 +1,11 @@
 name: "BuildTestDocker"
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - $defaultBranch
+  pull_request:
+    branches:
+      - $defaultBranch
 
 jobs:
   buildtest:
