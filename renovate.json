@@ -16,7 +16,7 @@
   "packageRules": [
     {
       "packageNames": ["net.sourceforge.plantuml:plantuml:plantuml"],
-      "allowedVersions": "/^1\\..*$/"
+      "allowedVersions": "/^1\\.[0-9]+\\.[0-9]+(\\.[0-9]+)?$/"
     }
   ]
 }
