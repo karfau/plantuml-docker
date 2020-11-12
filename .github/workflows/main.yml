@@ -1,11 +1,9 @@
 name: "Build'n'Test"
 on:
   push:
-    branches:
-      - refs/heads/$default-branch
+    branches: [ main ]
   pull_request:
-    branches:
-      - refs/heads/$default-branch
+    branches: [ main ]
 
 jobs:
   main:
