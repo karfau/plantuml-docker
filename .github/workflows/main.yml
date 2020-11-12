@@ -1,10 +1,8 @@
 name: "Build'n'Test"
-on:
-  - push
-  - pull_request
+on: [push, pull_request]
 
 jobs:
-  main:
+  build-and-test:
     name: "BuildAndTest"
     runs-on: ubuntu-latest
     steps:
