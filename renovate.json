@@ -5,7 +5,9 @@
     ":rebaseStalePrs",
     ":unpublishSafe",
     ":automergeRequireAllStatusChecks",
-    ":semanticCommits"
+    ":semanticCommits",
+    "docker:pinDigests",
+    "docker:disableMajor"
   ],
   "automerge": true,
   "masterIssue": true,
