@@ -22,4 +22,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: push to DockerHub
+        if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
         run: docker push karfau/plantuml
