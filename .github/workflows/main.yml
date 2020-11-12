@@ -2,10 +2,10 @@ name: "BuildTestDocker"
 on:
   push:
     branches:
-      - $defaultBranch
+      - main
   pull_request:
     branches:
-      - $defaultBranch
+      - main
 
 jobs:
   buildtest:
