@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "config:base",
+    ":separateMultipleMajorReleases",
+    ":rebaseStalePrs",
+    ":unpublishSafe",
+    ":automergeRequireAllStatusChecks",
+    ":semanticCommits",
+    "docker:pinDigests",
+    "docker:disableMajor"
+  ],
+  "automerge": true,
+  "masterIssue": true,
+  "masterIssueTitle": "Dependencies Dashboard (Renovate Bot)",
+  "prCreation": "not-pending",
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 4,
+  "packageRules": [
+    {
+      "packageNames": ["net.sourceforge.plantuml:plantuml"],
+      "allowedVersions": "/^1\\.[0-9]+\\.[0-9]+(\\.[0-9]+)?$/"
+    }
+  ]
+}
