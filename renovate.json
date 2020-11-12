@@ -15,7 +15,7 @@
   "prHourlyLimit": 4,
   "packageRules": [
     {
-      "packageNames": ["net.sourceforge.plantuml:plantuml:plantuml"],
+      "packageNames": ["net.sourceforge.plantuml:plantuml"],
       "allowedVersions": "/^1\\.[0-9]+\\.[0-9]+(\\.[0-9]+)?$/"
     }
   ]
