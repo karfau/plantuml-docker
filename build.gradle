@@ -14,7 +14,7 @@ configurations {
 }
 
 dependencies {
-    dockerDeps 'net.sourceforge.plantuml:plantuml:1.2020.21'
+    dockerDeps 'net.sourceforge.plantuml:plantuml:1.2020.22'
 }
 
 task getDockerDeps(type: Copy) {
