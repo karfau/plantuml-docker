@@ -29,7 +29,7 @@ If you found a way how to use the image, feel free to provide a PR that modifies
 
 ## Contribute
 
-To build the image run `./build-docker.sh` and make sure `JAVA_HOME` is set for the gradle wrapper to work.
+To build the image run `./build-docker.sh` and make sure `JAVA_HOME` is set for the gradle wrapper to work (can be set in `.env` if needed on your system).
 Run `./test-docker.sh` to see if everything still works as expected.
 
 ## Related
