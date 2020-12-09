@@ -16,6 +16,8 @@ jobs:
       - uses: gradle/wrapper-validation-action@v1
       - run: ./build-docker.sh
       - run: ./test-docker.sh
+      - name: "Fail if git detects changes"
+        run: git add --verbose --all && git diff HEAD --exit-code
       - name: Login to DockerHub
         if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
         uses: docker/login-action@v1
