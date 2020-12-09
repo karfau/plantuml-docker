@@ -19,7 +19,10 @@ As you can see in [test-docker.sh](./test-docker.sh) running the above command w
 
 Input and output of course follows the docker rules, and there is currently no mount point prepared to make working with files easier (PRs welcome!). 
 So either you mount a directory yourself and provide the related parameters, 
-or you use `-p[ipe]` argument to use stdin and stdout,
+
+or you use `-p[ipe]` argument to use stdin and stdout (as in [test-docker.sh](./test-docker.sh)):
+[![pipe sequence](test.svg)](./test-docker.sh)
+
 or you make use of the new [`-picoweb[:port]`](https://plantuml.com/picoweb) option together with `-encode` and `-decode`.
 
 If you found a way how to use the image, feel free to provide a PR that modifies `test-docker.sh` so it's part of the tests. I will also do that alongside making use of the image.

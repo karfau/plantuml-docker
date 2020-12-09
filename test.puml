@@ -1,0 +1,13 @@
+@startuml
+participant shell
+participant "docker run <b>-i</b> karfau/plantuml <color:green><b>-pipe</b> -tsvg [...]" as docker
+participant "java -jar plantuml.jar <color:green><b>-pipe</b> -tsvg [...]" as java
+
+shell->docker: < test.puml
+docker->java: stdin
+docker<-java: stderr
+shell<-docker: stderr
+docker<-java: stdout
+shell<-docker: stdout
+shell->shell: > test.svg
+@enduml
