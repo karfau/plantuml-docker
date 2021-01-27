@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/openjdk?tab=tags
-FROM openjdk:15-jdk-alpine@sha256:6ac8794912d16d92b0805380f7bebbfe3d67d7b1131f248f241d696c22dbf4a5
+FROM openjdk:15-jdk-alpine@sha256:fb60cc0750e6a3e90d2c853413f07dfde53ba3dc3c020b2fa20df0027ca0023a
 
 ENV LANG en_US.UTF-8
 
