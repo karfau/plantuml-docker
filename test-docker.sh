@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -xeuo pipefail
 
 PLANTUML_VERSION=$(./plantuml-version.sh)
 # print help by default (without any arguments
 docker run karfau/plantuml:$PLANTUML_VERSION
 
 # grep should find the version
-docker run karfau/plantuml:$PLANTUML_VERSION -version | grep "$PLANTUML_VERSION"
+if [[ "$PLANTUML_VERSION" = "1.2021.1" ]]; then
+  docker run karfau/plantuml:$PLANTUML_VERSION -version | grep "1.2021.01"
+else
+  docker run karfau/plantuml:$PLANTUML_VERSION -version | grep "$PLANTUML_VERSION"
+fi
 
 # To test the installation of graphviz
 docker run karfau/plantuml:$PLANTUML_VERSION -testdot
