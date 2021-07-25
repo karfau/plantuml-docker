@@ -12,15 +12,15 @@ jobs:
     name: "BuildAndTest"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # renovate: tag=v2
+      - uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b # renovate: tag=v1
       - run: ./build-docker.sh
       - run: ./test-docker.sh
       - name: "Fail if git detects changes"
         run: git add --verbose --all && git diff HEAD --exit-code
       - name: Login to DockerHub
         if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
-        uses: docker/login-action@v1
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9 # renovate: tag=v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
