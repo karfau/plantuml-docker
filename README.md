@@ -3,6 +3,7 @@
 Provides the source code for the [karfau/plantuml](https://hub.docker.com/r/karfau/plantuml) docker image.
 
 It offers the ability to use [plantuml](https://plantuml.com) as a cli tool based on docker.
+The changelog of plantuml is at https://plantuml.com/changes
 
 To build the image you need to have java installed, since we are making use of [gradle](https://gradle.org/) to manage the plantuml dependency.
 [Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/) is configured to update dependencies in an automated manner.
