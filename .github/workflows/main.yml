@@ -20,7 +20,7 @@ jobs:
         run: git add --verbose --all && git diff HEAD --exit-code
       - name: Login to DockerHub
         if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
-        uses: docker/login-action@6af3c118c8376c675363897acf1757f7a9be6583 # tag=v1
+        uses: docker/login-action@bb984efc561711aaa26e433c32c3521176eae55b # tag=v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
